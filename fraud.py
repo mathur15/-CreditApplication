@@ -31,6 +31,15 @@ for i,x in enumerate(X):
     markeredgewidth = 2)
 show()
 
+#Get a dictionary of the winner neurons
+mappings = som.win_map(X)
+#Get the data related to the box coordinate
+#coordinates from the visualization
+frauds = np.concatenate((mappings[(3,6)], mappings[(2,7)]), axis= 0)
+frauds = sc.inverse_transform(frauds)
+
+
+
 
 
 
